@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+.links-container {
+    position: absolute;
+    bottom: 0; right: 0;
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+}
