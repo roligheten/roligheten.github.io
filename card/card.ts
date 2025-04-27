@@ -1,13 +1,13 @@
 import * as THREE from 'three';
 
 export const getCardMesh = (anisotropy: number) => {
-    const frontTexture = new THREE.TextureLoader().load( "image.png" );
+    const frontTexture = new THREE.TextureLoader().load( "/image.png" );
     frontTexture.anisotropy = anisotropy;
-    const maskTexture = new THREE.TextureLoader().load( "mask.png" );
+    const maskTexture = new THREE.TextureLoader().load( "/mask.png" );
     maskTexture.anisotropy = anisotropy;
-    const maskInvTexture = new THREE.TextureLoader().load( "mask2.png" );
+    const maskInvTexture = new THREE.TextureLoader().load( "/mask2.png" );
     maskInvTexture.anisotropy = anisotropy;
-    const backTexture = new THREE.TextureLoader().load( "back.png" );
+    const backTexture = new THREE.TextureLoader().load( "/back.png" );
     backTexture.anisotropy = anisotropy;
 
     const geometry = new THREE.PlaneGeometry( 1, 0.573, 20, 20 );

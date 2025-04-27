@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(25, 25, 24);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: rgb(53, 50, 48);
+}
+
+p, ul {
+    font-weight: 500;
+    color: rgb(53, 50, 48);
+}
+
+li {
+    margin-bottom: 6px;
+    padding-inline-start: 0.3ch;
+}
+
+.oil-marker {
+    list-style-type: "🛢️";
+}
+
+.house-marker {
+    list-style-type: "🏠";
+}
+
+.id-marker {
+    list-style-type: "🪪";
+}
+
+.calendar-marker {
+    list-style-type: "🗓️";
+}
+
+.tech-marker {
+    list-style-type: "🧑‍💻";
+}
+
+article {
+    flex: 0 1 650px;
+}
