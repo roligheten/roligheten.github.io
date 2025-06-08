@@ -99,11 +99,13 @@ interface Question {
         feedback.textContent = '🎉 Correct! Well done!';
         feedback.className = 'feedback correct';
 
+        const currentSkill = getSkillForQuestion(currentQuestion.num1, currentQuestion.num2)
         if (Date.now() - startTimeQuestion <= 5000) {
-            const currentSkill = getSkillForQuestion(currentQuestion.num1, currentQuestion.num2)
             const newSkill = Math.max(0.01, currentSkill - 0.1)
             setSkillForQuestion(currentQuestion.num1, currentQuestion.num2, newSkill)
         }
+        const newSkill = Math.min(0.6, currentSkill + 0.1)
+        setSkillForQuestion(currentQuestion.num1, currentQuestion.num2, newSkill)
         
         setTimeout(() => {
             generateQuestion();
