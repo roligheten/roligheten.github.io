@@ -13,6 +13,19 @@ interface Question {
  let lastQuestion: [number, number] = [0,0]
  let startTimeQuestion = 0
 
+ function saveGameState() {
+    const serializedState = JSON.stringify(skillMatrix)
+    window.localStorage.setItem('math-game-state', serializedState)
+ }
+
+ function loadGameState() {
+    const serializedState = window.localStorage.getItem('math-game-state')
+
+    if (serializedState) {
+        const deserializedState = JSON.parse(serializedState)
+        skillMatrix = deserializedState
+    }
+ }
 
  function getSkillForQuestion(num1: number, num2: number): number {
     if (num1 < num2) {
@@ -131,6 +144,7 @@ interface Question {
             answerInput.focus();
         }, 2500);
     }
+    saveGameState()
     
  }
 
@@ -144,5 +158,6 @@ interface Question {
  });
  
  // Initialize game
+ loadGameState()
  generateQuestion();
  answerInput.focus();
